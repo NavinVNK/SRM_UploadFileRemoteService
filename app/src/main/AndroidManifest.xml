@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.ac.srmuniv.srm_uploadfileremoteservice" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name=".SRM_FileUploadRemoteService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="srmuniv.intent.action.bindMessageService" >
+                </action>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
